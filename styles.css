@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #333;
+}
+
+.author span {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.share {
+    position: relative;
+}
+
+.share-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.share-popup {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.share-popup span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.share-popup a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Show the share popup on hover */
+.share-button:hover + .share-popup,
+.share-popup:hover {
+    display: block;
+}
